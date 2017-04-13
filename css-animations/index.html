@@ -1,0 +1,97 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS ~Animations</title>
+  <link rel="stylesheet" href="prism.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="prism.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Source+Code+Pro" rel="stylesheet">
+</head>
+<body>
+
+  <h1>CSS Animations 👌</h1>
+<section id="types">
+  <p style="text-align: center;">There are two ways to animate using CSS&mdash;</p>
+  <div class="articles">
+    <article class="types-transitions">
+      <h2>Transitions</h2>
+      <div class="transition-example">Hover On Me !</div>
+      <p>&darr;</p>
+        <pre class="language-css">
+          <code>
+div.transition-example {
+  font-size: .5em;
+  background-color: rgb(20,100,255);
+  padding: 5vw;
+  margin: 2vw;
+  height: 5vw;
+  width: 5vw;
+  transition: all 2s;
+}
+/* this div has properties that change on hover */
+div.transition-example:hover {
+  background-color: rgb(255,100,20);
+  transform: rotate(360deg);
+}
+        </code>
+        </pre>
+
+        <p>Transitions require an interaction like:</p>
+        <ul>
+          <li>hovering over an element</li>
+          <li>changing the width of the browser</li>
+        <ul>
+    </article>
+    <article class="types-animations">
+      <h2>Animation</h2>
+      <div class="animate-example">I just do my thing ;)</div>
+      <p>&darr;</p>
+        <pre class="language-css">
+          <code>
+div.animate-example {
+  font-size: .5em;
+  background-color: rgb(20,100,255);
+  padding: 5vw;
+  margin: 2vw;
+  height: 5vw;
+  width: 5vw;
+  /* this is the good stuff! */
+  animation-duration: 4s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+}
+/* here's the info that describes our animation */
+@keyframes spin {
+  50% {
+    background-color: rgb(255,100,20);
+    transform: rotate(360deg);
+  }
+  100% {
+    background-color: rgb(20,100,255);
+    transform: rotate(-360deg);
+  }
+}
+      </code>
+      </pre>
+      <p>The CSS Animation property doesn't require an interaction and is more detailed.</p>
+      <p>Animation properties include.</p>
+      <ul>
+        <li><code>animation-duration</code> &mdash; how long is the animation</li>
+        <li><code>animation-iteration-count</code> &mdash; does it loop?</li>
+        <li><code>animation-timing-function</code> &mdash; the pace of the animation; this is how we get into easing!</li>
+        <li>and many more...</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+
+
+
+</body>
+</html>
+
+
+
+</body>
+</html>

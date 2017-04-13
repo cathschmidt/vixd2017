@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Media Query Example</title>
+  <style>
+
+    body {
+      margin: 5vw;
+      background-color: lavender;
+      /* transition: all 1s; */
+    }
+
+    div.box {
+      position: fixed;
+      left: 60vw;
+      top: 4vh;
+      /* transition: all 1s; */
+      background-color: tomato;
+      height: 200px;
+      width: 200px;
+    }
+
+    div.circle {
+      border: 2px solid green;
+      margin: auto;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      /* transition: background-color 1s;
+      transition: height 10s; */
+    }
+
+    div.rect {
+      height: 400px;
+      width: 200px;
+      background-color: purple;
+      margin: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      body {
+        background-color: pink;
+      }
+
+      div.box {
+        left: 4vw;
+        top: 60vh;
+      }
+
+      div.circle {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-color: yellow;
+      }
+
+      div.circle {
+        height: 500px;
+        width: 500px;
+        background-color: pink;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+  <div class="circle"></div>
+  <div class="rect"></div>
+
+</body>
+</html>

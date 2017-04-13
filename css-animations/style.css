@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(hotpink, salmon);
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 2.5vw;
+  line-height: 1.5em;
+}
+
+pre.language-css, pre.language-html{
+  box-shadow: none;
+  border-left: none;
+  background: cornsilk;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  margin-bottom: 1em;
+} pre.language-css:after, pre.language-html:after {
+  box-shadow: none;
+} pre.language-css:before, pre.language-html:before {
+  box-shadow: none;
+}
+
+code.language-css, code.language-html {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(70,70,70);
+} code {
+  font-family: "Source Code Pro", monospace;
+  font-size: .75em;
+  padding: .25em;
+  border-radius: 5px;
+  background: whitesmoke;
+  color: rgb(70,70,70);
+}
+
+h1 {
+  margin: 10vw;
+  margin-bottom: 0;
+  font-size: 3.5em;
+  display: inline-block;
+  line-height: 1em;
+  border-bottom: .1em solid pink;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h2 {
+  text-align: center;
+}
+
+section {
+  margin: 5vw;
+}
+
+section#types {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.articles {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+} article pre code.language-css{
+  height: auto;
+  font-size: .6em;
+  padding: 1vw;
+  margin: 0;
+  position: relative;
+  width: 40vw;
+}
+
+div.transition-example {
+  font-size: .5em;
+  background-color: rgb(20,100,255);
+  padding: 5vw;
+  margin: 2vw;
+  height: 5vw;
+  width: 5vw;
+  transition: all 2s;
+}
+/* this div has properties that change on hover */
+div.transition-example:hover {
+  background-color: rgb(255,100,20);
+  transform: rotate(360deg);
+}
+
+div.animate-example {
+  font-size: .5em;
+  background-color: rgb(20,100,255);
+  padding: 5vw;
+  margin: 2vw;
+  height: 5vw;
+  width: 5vw;
+  /* this is the good stuff! */
+  animation-duration: 4s;
+  animation-name: spin;
+  animation-iteration-count: initial;
+}
+/* here's the info that describes our animation */
+@keyframes spin {
+  0% {
+    opacity: 0;
+    border: 1px solid red;
+  }
+  20% {
+    opacity: .5;
+    border: 5px solid green;
+  }
+  50% {
+    opacity: .75;
+    background-color: rgb(255,100,20);
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgb(20,100,255);
+    transform: rotate(-360deg);
+  }
+}
